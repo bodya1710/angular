@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {AlbumDataService} from "../../albums-service/album-data.service";
 import {IAlbum} from "../../../modules/IAlbum";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-albums',
@@ -11,11 +11,11 @@ export class AlbumsComponent implements OnInit {
 
   albums!: IAlbum[];
 
-  constructor(private albumDataService: AlbumDataService) {
+  constructor(private activatedRoute: ActivatedRoute) {
   }
 
   ngOnInit(): void {
-    this.albumDataService.getAlbums().subscribe(value => this.albums = value);
+    this.activatedRoute.data.subscribe(({AlbumsData}) => this.albums = AlbumsData);
   }
 
 }

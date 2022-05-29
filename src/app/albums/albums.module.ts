@@ -6,6 +6,7 @@ import { AlbumsComponent } from './albums-components/albums/albums.component';
 import {HttpClientModule} from "@angular/common/http";
 import {AlbumDataService} from "./albums-service/album-data.service";
 import { AlbumComponent } from './albums-components/album/album.component';
+import {AlbumsResolver} from "./albums-service/albums.resolver";
 
 
 @NgModule({
@@ -18,6 +19,6 @@ import { AlbumComponent } from './albums-components/album/album.component';
     AlbumsRoutingModule,
     HttpClientModule
   ],
-  providers: [AlbumDataService]
+  providers: [AlbumDataService, AlbumsResolver]
 })
 export class AlbumsModule { }

@@ -6,6 +6,7 @@ import {TodosComponent} from './todos-components/todos/todos.component';
 import {TodosDataService} from "./todos-service/todos-data.service";
 import {HttpClientModule} from "@angular/common/http";
 import { TodoComponent } from './todos-components/todo/todo.component';
+import {TodosResolver} from "./todos-service/todos.resolver";
 
 
 @NgModule({
@@ -18,7 +19,7 @@ import { TodoComponent } from './todos-components/todo/todo.component';
     TodosRoutingModule,
     HttpClientModule
   ],
-  providers: [TodosDataService]
+  providers: [TodosDataService, TodosResolver]
 })
 export class TodosModule {
 }

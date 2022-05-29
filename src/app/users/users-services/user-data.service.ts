@@ -18,7 +18,8 @@ export class UserDataService {
   }
 
   getUser(id: string): Observable<IUsers> {
-    return this.http.get<IUsers>(this._url + '/' + id);
+    return this.http
+      .get<IUsers>(this._url + '/' + id);
   }
 
 }

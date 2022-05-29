@@ -1,11 +1,12 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { PhotosRoutingModule } from './photos-routing.module';
-import { PhotosComponent } from './photos-components/photos/photos.component';
+import {PhotosRoutingModule} from './photos-routing.module';
+import {PhotosComponent} from './photos-components/photos/photos.component';
 import {PhotoDataService} from "./photos-service/photo-data.service";
 import {HttpClientModule} from "@angular/common/http";
-import { PhotoComponent } from './photos-components/photo/photo.component';
+import {PhotoComponent} from './photos-components/photo/photo.component';
+import {PhotosResolver} from "./photos-service/photos.resolver";
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { PhotoComponent } from './photos-components/photo/photo.component';
     PhotosRoutingModule,
     HttpClientModule
   ],
-  providers: [PhotoDataService]
+  providers: [PhotoDataService, PhotosResolver]
 })
-export class PhotosModule { }
+export class PhotosModule {
+}
