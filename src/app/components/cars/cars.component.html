@@ -1,0 +1,11 @@
+
+<form [formGroup]="form" >
+  <div><label>model: <input type="text" formControlName = "model"></label></div>
+  <div><label>price: <input type="number" formControlName = "price"></label></div>
+  <div><label>year: <input type="number" formControlName = "year"></label></div>
+  <button (click)="sendCars()">Send</button>
+</form>
+
+
+<h2>Cars</h2>
+<app-car *ngFor="let car of cars" [car]="car"></app-car>
