@@ -1,0 +1,11 @@
+<div>
+  {{carDetails.id}} {{carDetails.model}} {{carDetails.year}} {{carDetails.price}}
+  <button (click)="deletCar()">Delet</button>
+</div>
+
+<form [formGroup]="formUpdateCar">
+  <div><label>model: <input type="text" formControlName = "model"></label></div>
+  <div><label>price: <input type="number" formControlName = "price"></label></div>
+  <div><label>year: <input type="number" formControlName = "year"></label></div>
+  <button (click)="upDate()">Send</button>
+</form>
